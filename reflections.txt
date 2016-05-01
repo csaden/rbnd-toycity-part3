@@ -1,0 +1,30 @@
+How long did you spend working on this project?
+
+I spent about an hour and a half on this project. I have prior experience
+coding with JavaScript and Python. I found much of the information to be easy to
+pick up from my experiences coding in Python. Object-oriented programming principles
+are the same between Python and Ruby; I needed to learn the Ruby syntax and Ruby
+-way of coding classes.
+
+What was the most rewarding challenge you conquered?
+
+I have a better understanding of class methods, public methods, private methods,
+and protected methods. I've always wondered about the differences between them,
+and I now understand how and why I might use the different methods.
+
+
+What two additional features did you build? Why?
+
+I added purchase amounts to customers, incrementing the total number of purchases
+a customer makes with each transaction that successfully occurs.
+
+I also added some additional search functionalities: finding all transactions
+for a given product title and finding all transactions for a given customer name.
+
+Where do you still have room to grow?
+
+I probably need more experience working with classes and understanding how classes
+should interact. It seems a little bit odd to me that I would call class methods from
+within other classes. The coupling might be too strong, which can lead to harder
+to maintain code. I'd also like to continue working with error classes, raising
+errors, and catching errors.
