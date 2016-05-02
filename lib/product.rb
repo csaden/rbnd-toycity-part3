@@ -13,7 +13,11 @@ class Product
   end
 
   def decrease_stock(amount=1)
-    @stock -= amount
+    if amount <= @stock
+      @stock -= amount
+    else
+      raise OutOfStockError.new "#{self.title} is out of stock."
+    end
   end
 
   def in_stock?
