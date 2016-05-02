@@ -8,18 +8,15 @@ class Customer
 
   def initialize(options={})
     @name = options[:name]
-    @purchase = 0
-    @items = []
+    @purchase_count = 0
+    @purchases = []
     add_to_customers
   end
 
   def purchase(product)
-    if product.in_stock?
-      Transaction.new(self, product)
-      @purchase += 1
-    else
-      raise OutOfStockError.new "#{product.title} is out of stock."
-    end
+    Transaction.new(self, product)
+    @purchases << product
+    @purchase_count += 1
   end
 
   def self.find_by_name(name)
@@ -33,8 +30,8 @@ class Customer
   private
 
   def add_to_customers
-    if @@customers.include?(self)
-      raise DuplicateProductError.new "#{@name} already exists."
+    if @@customers.map{|customer| customer.name}.include?@name
+      raise DuplicateCustomerError.new "#{@name} already exists."
     else
       @@customers << self
     end
